@@ -1,0 +1,24 @@
+schema {
+  query: Query
+}
+
+type Person {
+  name: String
+  height: String
+  mass: String
+  gender: String
+  homeworld: String
+}
+
+type PeopleResult {
+  count: Int
+  next: String
+  previous: String
+  results: [Person]
+}
+
+type Query {
+  people(page: Int!): PeopleResult
+  person(name: String!): [Person]
+}
+
