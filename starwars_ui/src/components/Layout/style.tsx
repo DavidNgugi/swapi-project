@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import star_wars_bg from "../../images/star_wars_bg.png";
+import star_wars_bg from "../../assets/images/star_wars_bg.png";
 
 const StyledAppContainer = styled.div`
   background-image: url(${star_wars_bg});

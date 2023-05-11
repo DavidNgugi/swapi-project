@@ -4,7 +4,7 @@ import {
     Center,
     Image,
 } from "@chakra-ui/react";
-import logo from "../../images/logo.png";
+import logo from "../../assets/images/logo.png";
 
 const Logo: React.FC = () => {
     return (
