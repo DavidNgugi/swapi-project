@@ -1,4 +1,4 @@
-import { PeopleResult, Person } from '../types';
+import { HomeWorld, PeopleResult, Person } from '../types';
 import API from '../api';
 
 const resolvers = {
@@ -21,6 +21,15 @@ const resolvers = {
         throw new Error('Error fetching person');
       }
     },
+    homeworld: async (_: any, { id }: { id: number }): Promise<HomeWorld> => {
+      try {
+        const response = await API.get(`/planets/${id}`);
+        return response.data;
+      } catch (error) {
+        console.error('Error fetching homeworld:', error);
+        throw new Error('Error fetching homeworld');
+      }
+    }
   }
 };
 

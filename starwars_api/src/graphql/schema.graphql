@@ -10,6 +10,18 @@ type Person {
   homeworld: String
 }
 
+type HomeWorld {
+  name: String
+  rotation_period: String
+  orbital_period: String
+  diameter: String
+  climate: String
+  gravity: String
+  terrain: String
+  surface_water: String
+  population: String
+}
+
 type PeopleResult {
   count: Int
   next: String
@@ -20,5 +32,6 @@ type PeopleResult {
 type Query {
   people(page: Int!): PeopleResult
   person(name: String!): [Person]
+  homeworld(id: Int!): HomeWorld
 }
 
