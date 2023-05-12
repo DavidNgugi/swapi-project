@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '../Layout';
 import { DetailsContainer, DetailsTitle, DetailsText } from './styles';
@@ -76,7 +76,7 @@ const DetailsPage: React.FC = () => {
                             <Image src={profile} alt="Placeholder" width={250} />
                         )}
                     </GridItem>
-                    <GridItem colSpan={1}>
+                    <GridItem colSpan={1} marginTop={50}>
                         <DetailsTitle>{name}</DetailsTitle>
                         <ErrorBoundary>
                             <DetailsText>Height: {data?.height}</DetailsText>

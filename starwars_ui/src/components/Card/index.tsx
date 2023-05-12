@@ -6,10 +6,17 @@ import {
 } from "@chakra-ui/react";
 
 const StyledBox = styled(ChakraBox)`
+  display: flex;
+  flex: 1;
+  background-color: #eeee;
+  color: #000;
+  justify-content: center;
+  align-items: center;
   &:hover {
     cursor: pointer;
-    background-color: #f5f5f5;
-    color: #000000;
+    background-color: #000;
+    color: #cec418;
+    border: 1px solid #cec418;
   }
 `;
 
